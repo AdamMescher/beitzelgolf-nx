@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "beitzelgolf": "apps/beitzelgolf",
+    "beitzelgolf-e2e": "apps/beitzelgolf-e2e"
+  }
+}
