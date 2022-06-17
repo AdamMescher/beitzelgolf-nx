@@ -3,6 +3,9 @@
   "version": 2,
   "projects": {
     "beitzelgolf": "apps/beitzelgolf",
-    "beitzelgolf-e2e": "apps/beitzelgolf-e2e"
+    "beitzelgolf-e2e": "apps/beitzelgolf-e2e",
+    "cms": "apps/cms",
+    "ui": "libs/ui",
+    "ui-e2e": "apps/ui-e2e"
   }
 }
