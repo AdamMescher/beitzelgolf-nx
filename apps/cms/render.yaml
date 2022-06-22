@@ -11,6 +11,8 @@ services:
         value: ~16.13.0
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: PORT
       - key: CLOUDINARY_NAME
         sync: false
       - key: CLOUDINARY_KEY
