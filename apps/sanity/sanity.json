@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "project": {
+    "name": "sanity"
+  },
+  "api": {
+    "projectId": "w1bk101b",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "asset-source-unsplash",
+    "cloudinary",
+    "asset-source-cloudinary"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}
