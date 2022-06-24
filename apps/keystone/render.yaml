@@ -7,7 +7,7 @@ services:
     startCommand: yarn start
     envVars:
       - key: NODE_VERSION
-        value: 16.
+        value: 16.15.0
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
