@@ -18,7 +18,7 @@ export function Index() {
           <div id="welcome">
             <h1>
               <span> Hello there, </span>
-              Welcome beitzelgolf 👋
+              Welcome web 👋
             </h1>
           </div>
 
