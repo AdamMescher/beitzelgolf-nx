@@ -44,7 +44,7 @@
         "executor": "@nrwl/jest:jest",
         "outputs": ["coverage/apps/keystone"],
         "options": {
-          "jestConfig": "apps/keystone/jest.config.ts",
+          "jestConfig": "apps/keystone/jest.config.js",
           "passWithNoTests": true
         }
       },
