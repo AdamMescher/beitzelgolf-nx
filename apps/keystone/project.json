@@ -1,0 +1,61 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/keystone",
+    "projectType": "application",
+    "targets": {
+      "build": {
+        "executor": "@nrwl/next:build",
+        "outputs": ["{options.outputPath}"],
+        "defaultConfiguration": "production",
+        "options": {
+          "root": "apps/keystone",
+          "outputPath": "dist/apps/keystone"
+        },
+        "configurations": {
+          "development": {},
+          "production": {}
+        }
+      },
+      "serve": {
+        "executor": "@nrwl/next:server",
+        "defaultConfiguration": "development",
+        "options": {
+          "buildTarget": "keystone:build",
+          "dev": true
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "keystone:build:development",
+            "dev": true
+          },
+          "production": {
+            "buildTarget": "keystone:build:production",
+            "dev": false
+          }
+        }
+      },
+      "export": {
+        "executor": "@nrwl/next:export",
+        "options": {
+          "buildTarget": "keystone:build:production"
+        }
+      },
+      "test": {
+        "executor": "@nrwl/jest:jest",
+        "outputs": ["coverage/apps/keystone"],
+        "options": {
+          "jestConfig": "apps/keystone/jest.config.ts",
+          "passWithNoTests": true
+        }
+      },
+      "lint": {
+        "executor": "@nrwl/linter:eslint",
+        "outputs": ["{options.outputFile}"],
+        "options": {
+          "lintFilePatterns": ["apps/keystone/**/*.{ts,tsx,js,jsx}"]
+        }
+      }
+    },
+    "tags": []
+  }
+  
