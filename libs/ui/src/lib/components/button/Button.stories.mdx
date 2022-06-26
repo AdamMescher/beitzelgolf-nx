@@ -1,0 +1,42 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import Button from './Button';
+
+<Meta
+  title="Button"
+  component={Button}
+  argTypes={{
+    onClick: { action: 'clicked' },
+    children: {
+      control: {
+        type: 'text',
+      },
+      defaultValue: 'Button Text',
+    },
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+      defaultValue: false,
+    },
+  }}
+/>
+
+export const Template = (args) => <Button {...args} />;
+
+# Button
+
+## Default
+
+<Canvas>
+  <Story name="Default" args={{ disabled: false }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled" args={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
