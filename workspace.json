@@ -4,7 +4,7 @@
   "projects": {
     "web": "apps/web",
     "web-e2e": "apps/web-e2e",
-    "keystone": "apps/keystone",
+    "cms": "apps/cms",
     "ui": "libs/ui",
     "ui-e2e": "apps/ui-e2e"
   }

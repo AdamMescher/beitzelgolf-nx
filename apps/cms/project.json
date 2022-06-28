@@ -1,6 +1,6 @@
 {
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "apps/keystone",
+    "sourceRoot": "apps/cms",
     "projectType": "application",
     "targets": {
       "build": {
@@ -8,8 +8,8 @@
         "outputs": ["{options.outputPath}"],
         "defaultConfiguration": "production",
         "options": {
-          "root": "apps/keystone",
-          "outputPath": "dist/apps/keystone"
+          "root": "apps/cms",
+          "outputPath": "dist/apps/cms"
         },
         "configurations": {
           "development": {},
@@ -20,16 +20,16 @@
         "executor": "@nrwl/next:server",
         "defaultConfiguration": "development",
         "options": {
-          "buildTarget": "keystone:build",
+          "buildTarget": "cms:build",
           "dev": true
         },
         "configurations": {
           "development": {
-            "buildTarget": "keystone:build:development",
+            "buildTarget": "cms:build:development",
             "dev": true
           },
           "production": {
-            "buildTarget": "keystone:build:production",
+            "buildTarget": "cms:build:production",
             "dev": false
           }
         }
@@ -37,14 +37,14 @@
       "export": {
         "executor": "@nrwl/next:export",
         "options": {
-          "buildTarget": "keystone:build:production"
+          "buildTarget": "cms:build:production"
         }
       },
       "test": {
         "executor": "@nrwl/jest:jest",
-        "outputs": ["coverage/apps/keystone"],
+        "outputs": ["coverage/apps/cms"],
         "options": {
-          "jestConfig": "apps/keystone/jest.config.js",
+          "jestConfig": "apps/cms/jest.config.js",
           "passWithNoTests": true
         }
       },
@@ -52,7 +52,7 @@
         "executor": "@nrwl/linter:eslint",
         "outputs": ["{options.outputFile}"],
         "options": {
-          "lintFilePatterns": ["apps/keystone/**/*.{ts,tsx,js,jsx}"]
+          "lintFilePatterns": ["apps/cms/**/*.{ts,tsx,js,jsx}"]
         }
       }
     },
