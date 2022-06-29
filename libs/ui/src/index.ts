@@ -1,2 +1,2 @@
-export * as Button from './lib/Button';
-export * as GlobalStyle from './lib/GlobalStyle';
+export { default as Button } from './lib/Button';
+export { default as GlobalStyle } from './lib/GlobalStyle';

@@ -1,5 +1,6 @@
-// import Button from '../../../libs/ui/src/lib/Button';
-import { Button } from '@beitzelgolf-nx/ui/Button';
+// import ButtonDirect from '../../../libs/ui/src/lib/Button';
+import * as React from 'react';
+import { Button } from '@beitzelgolf-nx/ui';
 
 const Index = () => {
   return (

@@ -13,6 +13,9 @@ const nextConfig = {
       domains: ['res.cloudinary.com'],
     },
   },
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 module.exports = withNx(nextConfig);
