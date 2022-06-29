@@ -1,7 +1,10 @@
 {
   "name": "beitzelgolf-nx",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
