@@ -4,10 +4,10 @@ import { Button } from '@beitzelgolf-nx/ui';
 
 const Index = () => {
   return (
-    <div>
+    <section>
       <h1>Hello Next.js</h1>
       <Button />
-    </div>
+    </section>
   );
 };
 

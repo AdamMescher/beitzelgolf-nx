@@ -9,7 +9,7 @@ import { ServerStyleSheet } from 'styled-components';
 
 function MyDocument() {
   return (
-    <Html>
+    <Html lang="en">
       <Head />
       <body>
         <Main />
