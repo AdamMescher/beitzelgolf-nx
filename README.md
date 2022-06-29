@@ -2,6 +2,10 @@
 
 # BeitzelGolfNx
 
+## Uptime
+
+[UptimeRobot](https://stats.uptimerobot.com/klY3LUkwZw)
+
 ## Apps
 
 ### Web
