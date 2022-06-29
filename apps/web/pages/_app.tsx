@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { GlobalStyle } from '@beitzelgolf-nx/ui';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,6 +9,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Beitzel Golf</title>
       </Head>
       <main>
+        <GlobalStyle />
         <Component {...pageProps} />
       </main>
     </>
