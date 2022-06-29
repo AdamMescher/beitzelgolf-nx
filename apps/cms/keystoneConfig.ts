@@ -1,5 +1,6 @@
 import { lists } from './schema';
 import { session } from './auth';
+import 'dotenv/config';
 
 const keystoneConfig = {
   db: {
@@ -10,6 +11,12 @@ const keystoneConfig = {
     enableLogging: true,
     useMigrations: true,
     idField: { kind: 'uuid' },
+  },
+  server: {
+    healthCheck: {
+      path: '/health',
+      data: { status: 'healthy' },
+    },
   },
   ui: {
     isAccessAllowed: (context) => !!context.session?.data,
