@@ -15,7 +15,11 @@ const keystoneConfig = {
   server: {
     healthCheck: {
       path: '/health',
-      data: { status: 'healthy' },
+      data: () => ({
+        status: 'healthy',
+        timestamp: Date.now(),
+        uptime: process.uptime(),
+      }),
     },
   },
   ui: {
