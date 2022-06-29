@@ -1,7 +1,16 @@
+import * as React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
 import { GlobalStyle } from '@beitzelgolf-nx/ui';
+
+if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const ReactDOM = require('react-dom');
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
+}
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
