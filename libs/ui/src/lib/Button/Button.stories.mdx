@@ -18,6 +18,20 @@ import Button from './Button';
       },
       defaultValue: false,
     },
+    variant: {
+      control: {
+        type: 'select',
+        options: ['fill', 'outline', 'text'],
+      },
+      defaultValue: 'fill',
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+      defaultValue: 'medium',
+    }
   }}
 />
 
@@ -25,18 +39,26 @@ export const Template = (args) => <Button {...args} />;
 
 # Button
 
-## Default
+## Fill (Default)
 
 <Canvas>
-  <Story name="Default" args={{ disabled: false }}>
+  <Story name="Fill" args={{ variant: 'fill' }}>
     {Template.bind({})}
   </Story>
 </Canvas>
 
-## Disabled
+## Outline
 
 <Canvas>
-  <Story name="Disabled" args={{ disabled: true }}>
+  <Story name="Outline" args={{ variant: 'outline' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Text
+
+<Canvas>
+  <Story name="Text" args={{ variant: 'text' }}>
     {Template.bind({})}
   </Story>
 </Canvas>
