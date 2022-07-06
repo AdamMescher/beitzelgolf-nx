@@ -2,7 +2,8 @@ import * as React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
-import { GlobalStyle } from '@beitzelgolf-nx/ui';
+import { GlobalStyle, theme } from '@beitzelgolf-nx/ui';
+import { ThemeProvider } from 'styled-components';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -33,8 +34,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Beitzel Golf</title>
       </Head>
       <main>
-        <GlobalStyle />
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </ThemeProvider>
       </main>
     </>
   );

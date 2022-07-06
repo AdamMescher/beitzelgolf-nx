@@ -1,0 +1,23 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import Input from './Input';
+
+<Meta title="Input" component={Input} />
+
+export const Template = (args) => <Input {...args} />;
+
+# Input Component
+
+## Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      label: 'label text',
+      name: 'name text',
+      placeholder: 'placeholder text',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

@@ -3,19 +3,21 @@ import styled from 'styled-components';
 import SIZES from './sizes';
 
 type ButtonProps = {
-  style: React.CSSProperties;
+  style?: React.CSSProperties;
   children: React.ReactNode;
   size?: string;
   variant?: string;
   disabled?: boolean;
+  type?: 'submit' | 'reset' | 'button';
 };
 
 const Button = ({
   size = 'medium',
-  variant = 'primary',
+  variant = 'fill',
   disabled,
-  children,
+  type,
   style,
+  children,
   ...rest
 }: ButtonProps) => {
   const styles = SIZES[size];
@@ -30,7 +32,7 @@ const Button = ({
     throw new Error(`Unrecognized Button variant: ${variant}`);
   }
   return (
-    <Component disabled={disabled} style={{ ...styles, style }} {...rest}>
+    <Component disabled={disabled} style={{ ...styles, style }} type={type} {...rest}>
       {children}
     </Component>
   );
